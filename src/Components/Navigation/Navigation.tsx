@@ -1,3 +1,4 @@
+
 interface NavigationsProps{
     //void fordi den ikke returnere noget tilbage da det er en setfunction.
     setIsOpen:(isOpen:boolean) => void

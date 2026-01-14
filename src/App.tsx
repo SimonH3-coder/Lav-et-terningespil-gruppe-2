@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import './App.module.scss'
-import {Navigation} from '../Navigation/Navigation'
-import { Modal } from '../Modal_Regler/Modal_Regler'
+import {Navigation} from './Components/Navigation/Navigation'
+import { Modal } from './Components/Modal_Regler/Modal_Regler'
 
 
 

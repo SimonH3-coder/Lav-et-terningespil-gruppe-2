@@ -1,2 +1,5 @@
-# Lav-et-terningespil-gruppe-2
-Lav et terningespil gruppe 2 
+Gruppe 2
+Jack
+Simon
+Daniel
+Kari

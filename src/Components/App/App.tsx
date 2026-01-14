@@ -11,13 +11,17 @@ function App() {
 
   return (
     <>
-     <Navigation setIsOpen ={setIsOpen}></Navigation>
+    <Navigation setIsOpen ={setIsOpen}/>
+    {isOpen=== true &&(
+    <>
     <Modalwrapper></Modalwrapper>
-     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+     <Modal setIsOpen={setIsOpen}>
       <h1>Regler for Yatzy</h1>
       <p>indsæt regler her....</p>
      </Modal>
    
+    </>
+    )}
     </>
   )
 }

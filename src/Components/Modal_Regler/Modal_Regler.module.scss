@@ -1,11 +1,18 @@
 .modalStyle {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 background-color:rgb(240,240,240) ;
 border-radius: 8px;
 box-shadow: 5px 2px 7px rgba(33,33,33,0.5);
-min-width: 300px;
-min-height: 300px;
+min-width: 400px;
+min-height: 400px;
 position: fixed;
 transform:translate(-50%,-50%);
 top: 50%;
 left: 50%;
+text-align: center;
+padding: 2rem;
+
+}
+p{
+    text-align: left;
 }

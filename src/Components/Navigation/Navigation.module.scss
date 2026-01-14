@@ -1,3 +1,22 @@
+.liStyle{
 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style: none;
+}
+
+.liStyle:hover{
+    background-color: rgb(255, 0, 191);
+}
+.navStyle{
+    display: flex;
+    flex-direction: row;
+}
+.buttonStyle{
+  background-color: rgb(255, 255, 0);
+  
+}
+.buttonStyle:hover{
+  background-color: rgb(93, 0, 255);
+}
 
 

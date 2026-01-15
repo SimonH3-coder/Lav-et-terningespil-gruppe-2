@@ -1,4 +1,4 @@
-import "./App.css";
+import { useState } from "react";
 import { Pointsystem1 } from "./Components/Pointsystem/Pointsystem1";
 
 function App() {

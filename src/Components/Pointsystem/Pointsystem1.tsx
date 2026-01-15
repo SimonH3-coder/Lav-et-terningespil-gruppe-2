@@ -1,73 +1,58 @@
-import {usestate} from "react"
-import styles from "./components/pointsystem1.module.scss"
+import { useState } from "react";
+import styles from "./pointsystem1.module.scss";
 
-export const pointsystem1 = ( tal, kategori ) => {
-    const counts = countDice(tal);
-    const values = Object.values(counts).map(([v, c])) => ({value: +v, count: c}));
-
-    switch (kategori) {
-        case "eter":
-        case "toer":
-        case "treer":
-        case "firer":
-        case "femer":
-        case "sekser":
-        const num = [eter, toer, treer, firer, femer, sekser].indexOf(kategori) + 1
-        return dice.filter(d => d === num).reduce((a,b)) => a+b, 0)
+function beregnPoint(tal: number[], type: string) {
+  if (type === "") return "-";
 }
 
-case "et par": {
-    const par = values.filter(v => v.count >= 2).sort((a,b) => b.value - a.value)[0];
-    return par ? par.value * 2 : 0;
+const pointTypes = ["et'ere", "to'ere", "tre'ere", "fire'ere", "femmer'ere", "sekser'ere", "bonus", "to par", "tre par", "tre ens", "to gang tre ens", "fire ens", "lille straight", "stor straight", "royal straight", "fuldt hus", "chance", "yatzy"];
+
+export function Pointsystem1() {
+  // One input per point type
+  const [inputs, setInputs] = useState<string[]>(Array(pointTypes.length).fill(""));
+
+  // Helper to update a specific input
+  const handleInputChange = (index: number, value: string) => {
+    const newInputs = [...inputs];
+    newInputs[index] = value;
+    setInputs(newInputs);
+  };
+
+  return (
+    <div className={styles.container}>
+      <h2>Pointsystem:</h2>
+      {pointTypes.map((type, idx) => {
+        const arr = inputs[idx]
+          .split(",")
+          .map((str) => parseInt(str.trim(), 10))
+          .filter((n) => !isNaN(n));
+        return (
+          <div key={type}>
+            <p>
+              {type.charAt(0).toUpperCase() + type.slice(1)}: {beregnPoint(arr, type)}
+            </p>
+            <input value={inputs[idx]} onChange={(e) => handleInputChange(idx, e.target.value)} placeholder="Indtast terninger her (fx 1,2,3,4,5,6)" />
+
+            
+          </div>
+          
+            const pointValues = pointTypes.map((type, index) => {
+            const arr = inputs[index]
+              .split(",")
+              .map((str) => parseInt(str.trim(), 10))
+              .filter((n) => !isNaN(n));
+            const val = beregnPoint(arr, type);
+            return typeof val === "number" ? val : 0;
+          });
+
+          const sum = pointValues.reduce((acc, v, index) => {
+            if (pointTypes[index] === "bonus") return acc; 
+            return acc + v;
+          }, 0); 
+        );
+      })}
+    </div>
+  );
 }
 
-case "to par": {
-    const par = values.filter(v => v.count >= 2).sort((a,b) => b.value - a.value);
-    return par.length >=2 ?(par[0].value * 2 + par[1].value * 2) : 0;
-}
-
-case "tre ens": {
-    const v = values.find(v => v.count >= 3);
-    return v ? v.value * 3 : 0;
-}
-
-case "fire ens": {
-    const v = values.find(v => v.count >= 4);
-    return v ? v.value * 4 : 0;
-}
-
-case "lille straight": 
-return [1,2,3,4,5].every(n=> tal.includes(n)) ? 15 : 0;
-
-case "stor straight":
-return [2,3,4,5,6].every(n=> tal.includes(n)) ? 20 : 0;
-
-case "fuldt hus": {
-    const hasThree = values.find(v => v.count === 3);
-    const hasTwo = values.find(v => v.count === 2);
-    return hasThree && hasTwo ? hasThree.value * 3 + hasTwo.value * 2 : 0;
-}
-
-case "chance":
-    return tal.reduce((a,b) => a+b, 0);
-case "yatzy": 
-    return values.some(v => v.count === 5) ? 50 : 0;
-
-default:
-    return 0;
-
-}
-};
-
-export default function yatzy() {
-    const [tal, setTal] = usestate([1,2,3,4,5]);
-    return (
-        <div>
-            <h2>Terninger: {tal.join(", ")}</h2>
-            <p>Et par: {pointsystem1(tal, "et par")}</p>
-            <p>Chance: {pointsystem1(tal, "chance")}</p>
-            <p>Yatzy: {pointsystem1(tal, "yatzy")}</p>
-        </div>
-    );
-
-}
+export default Pointsystem1;

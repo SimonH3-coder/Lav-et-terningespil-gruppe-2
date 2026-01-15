@@ -1,3 +1,7 @@
+import React from "react";
+import SpillerOgTurer from "./Components/Spiller og turer/Spiller og turer";
+import SplineBackground from "./Components/Baggrund/SplineBaggrund";
+import Header from "./Components/Header/Header";
 import { useState } from 'react'
 import {Modal} from './Components/Modal_Regler/Modal_Regler'
 import { Navigation } from './Components/Navigation/Navigation';
@@ -11,6 +15,13 @@ function App() {
   const [ isOpen3, setIsOpen3] = useState(false)
 
   return (
+    <div>
+      <SplineBackground />
+      <Header />
+      <SpillerOgTurer />
+    </div>
+  );
+}
     <>
     <Navigation setIsOpen ={setIsOpen}setIsOpen2 = {setIsOpen2} setIsOpen3 = {setIsOpen3} />
 
@@ -54,4 +65,4 @@ function App() {
 
 
 
-export default App
+export default App;

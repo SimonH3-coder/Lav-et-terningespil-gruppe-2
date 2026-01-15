@@ -1,0 +1,47 @@
+.container {
+  padding: 1rem;
+}
+
+.setup {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.formRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.formRow input {
+  flex: 1;
+  padding: 0.4rem;
+}
+
+.playerList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+
+.playerItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.turnInfo {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.diceWrapper {
+  margin-top: 1rem;
+}

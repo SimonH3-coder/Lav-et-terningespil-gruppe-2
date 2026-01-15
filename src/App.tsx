@@ -18,12 +18,9 @@ function App() {
     <div>
       <SplineBackground />
       <Header />
+      <Navigation setIsOpen ={setIsOpen}setIsOpen2 = {setIsOpen2} setIsOpen3 = {setIsOpen3} />
       <SpillerOgTurer />
-    </div>
-  );
-}
-    <>
-    <Navigation setIsOpen ={setIsOpen}setIsOpen2 = {setIsOpen2} setIsOpen3 = {setIsOpen3} />
+      
 
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <h1>Sådan spiller man Yatzy</h1>
@@ -58,10 +55,9 @@ function App() {
       <p>YATZY: Et kast, så alle terninger viser ens. Dette kast giver terningernes værdi + 50 point.</p>
 
      </Modal>
-    </>
-    );
-    }
-
+    </div>
+  );
+}
 
 
 

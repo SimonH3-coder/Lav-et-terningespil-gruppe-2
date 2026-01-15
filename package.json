@@ -1,5 +1,5 @@
 {
-  "name": "lav-et-terningespil-gruppe-2",
+  "name": "yatzy",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "sass": "^1.97.2"
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

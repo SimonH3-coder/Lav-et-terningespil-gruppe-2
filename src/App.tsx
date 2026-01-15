@@ -1,12 +1,11 @@
-import React from "react";
-import DiceGame from "./Components/Terninger/terninger";
+import { useState } from 'react'
 
 function App() {
   return (
-    <div>
-      <DiceGame />
-    </div>
-  );
+    <>
+      
+    </>
+  )
 }
 
-export default App;
+export default App

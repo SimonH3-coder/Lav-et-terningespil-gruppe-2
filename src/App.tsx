@@ -1,5 +1,5 @@
 import React from "react";
-import DiceGame from "../Terninger/terninger";
+import DiceGame from "./Components/Terninger/terninger";
 
 function App() {
   return (

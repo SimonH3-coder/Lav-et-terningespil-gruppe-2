@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Terninger.scss";
+import styles from "./terninger.module.scss";
 
 type DieValue = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -14,12 +14,12 @@ const DiceGame = () => {
   };
 
   return (
-    <div className="game">
-      <div className="dice-container">
-        {dice.map((value, index) => (
-          <div key={index} className={`die face-${value}`}>
-            {[...Array(value)].map((_, i) => (
-              <span key={i} className="dot"></span>
+    <div className={styles.game}>
+      <div className={styles.diceContainer}>
+        {dice.map((value: DieValue, index: number) => (
+          <div key={index} className={`${styles.die} ${styles[`face-${value}`]}`}>
+            {[...Array(value)].map((_: unknown, i: number) => (
+              <span key={i} className={styles.dot}></span>
             ))}
           </div>
         ))}

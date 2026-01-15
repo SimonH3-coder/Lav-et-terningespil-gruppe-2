@@ -73,13 +73,13 @@ export default function SpillerOgTurer() {
             <strong>Nuværende spiller:</strong> {players[currentIndex]}
           </div>
 
+          <div className={styles.diceWrapper}>
+            <DiceGame />
+          </div>
+
           <div className={styles.controls}>
             <button onClick={nextTurn}>Næste tur</button>
             <button onClick={resetSetup}>Afslut / Tilbage</button>
-          </div>
-
-          <div className={styles.diceWrapper}>
-            <DiceGame />
           </div>
         </div>
       )}

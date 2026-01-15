@@ -1,5 +1,5 @@
 import "./App.css";
-import { Pointsystem1 } from "./compenents/Pointsystem1.tsx";
+import { Pointsystem1 } from "./Components/Pointsystem/Pointsystem1";
 
 function App() {
   return (

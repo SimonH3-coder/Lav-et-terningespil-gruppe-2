@@ -5,6 +5,8 @@ border-radius: 8px;
 box-shadow: 5px 2px 7px rgba(33,33,33,0.5);
 min-width: 400px;
 min-height: 400px;
+max-height: 80vh;
+overflow: scroll;
 position: fixed;
 transform:translate(-50%,-50%);
 top: 50%;

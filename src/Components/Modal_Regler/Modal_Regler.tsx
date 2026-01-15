@@ -11,12 +11,13 @@ export function Modal({setIsOpen, isOpen, children}: ModalProps){
     return(
         isOpen === true &&(
     <>
+
     <Modalwrapper></Modalwrapper>
         <section className={style.modalStyle}>
             <button onClick={()=> setIsOpen(false)}>X</button>
             {children}
         </section>
         </>
-        )
+                )
     )
 }

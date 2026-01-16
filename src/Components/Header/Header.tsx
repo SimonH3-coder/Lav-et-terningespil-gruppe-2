@@ -1,5 +1,7 @@
+// Import af styles
 import styles from "./header.module.scss";
 
+// Header komponent der viser titlen
 export default function Header() {
   return (
     <header className={styles.header}>

@@ -1,4 +1,3 @@
-import React from "react";
 import SplineBackground from "./Components/Baggrund/SplineBaggrund";
 import Header from "./Components/Header/Header";
 import { GameWrapper } from "./Components/GameWrapper/GameWrapper";
@@ -6,18 +5,27 @@ import { useState } from 'react'
 import {Modal} from './Components/Modal_Regler/Modal_Regler'
 import { Navigation } from './Components/Navigation/Navigation';
 
+// Hovedkomponenten for applikationen, der styrer layout og modals
 function App() {
+  // State til at styre om den første modal (spilleregler) er åben
   const [isOpen, setIsOpen] = useState(false)
+  // State til at styre om den anden modal (pointsystem) er åben
   const [ isOpen2, setIsOpen2] = useState(false)
+  // State til at styre om den tredje modal (kombinationer) er åben
   const [ isOpen3, setIsOpen3] = useState(false)
 
+  // Render komponenterne og modals
   return (
     <div>
+      {/* Baggrundskomponent med Spline animation */}
       <SplineBackground />
+      {/* Header komponent med titel */}
       <Header />
+      {/* Hovedspil wrapper med pointsystem og spiller tur komponenter */}
       <GameWrapper />
       
 
+    {/* Modal for spilleregler */}
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <h1>Sådan spiller man Yatzy</h1>
       <p>Kast de 5 terninger, ved at trykke på kast knappen.</p>
@@ -28,6 +36,7 @@ function App() {
       <p>ikke udfyldt kombination på yatzy-tavlen.</p>
      </Modal>
 
+     {/* Modal for pointsystem */}
      <Modal isOpen={isOpen2} setIsOpen={setIsOpen2}>
       <h1>Pointsystem</h1>
       <p>Første kast af de 3 giver 1-4-4-6-3. Spilleren lader 4’erne ligge og kaster de øvrige terninger om, som nu giver 2-5-4. 4’eren bliver liggende og spilleren kaster de øvrige terninger om som giver 1-1. Resultatet bliver “hus” (4-4-4-1-1) pointtal 14, som noteres i rubrikken “hus”. Hvis det sidste kast havde været 3-1, så var resultatet blevet (4-4-4-3-1), pointtallet 12, som man kan notere i rubrikken 4-ere.</p>
@@ -35,6 +44,7 @@ function App() {
       <p>Hver rubrik må kun anvendes én gang. Ved et samlet pointantal på 63 eller mere på øverste sektion af yatzy-tavlen, tildeles en bonus på 50 point.</p>
      </Modal>
 
+     {/* Modal for kombinationer */}
      <Modal isOpen={isOpen3} setIsOpen={setIsOpen3}>
       <h1>Kombinationer</h1>
       <p>ENERE: Det gælder om at slå et så stort antal ettere som muligt. Hver ener giver et point.</p>
@@ -51,6 +61,7 @@ function App() {
       <p>YATZY: Et kast, så alle terninger viser ens. Dette kast giver terningernes værdi + 50 point.</p>
 
      </Modal>
+      {/* Navigation komponent med knapper til at åbne modals */}
       <Navigation setIsOpen ={setIsOpen}setIsOpen2 = {setIsOpen2} setIsOpen3 = {setIsOpen3} />
 
     </div>

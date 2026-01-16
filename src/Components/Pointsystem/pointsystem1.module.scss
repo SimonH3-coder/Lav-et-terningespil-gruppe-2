@@ -1,38 +1,48 @@
 .container {
-  max-width: 400px;
-  margin-right: auto;
-  padding: 2rem;
-  background: white;
+  width: 100%;
+  background: #5a31f435;
   border-radius: 12px;
+  border: solid 4px;
+  border-color: #5a31f455;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  font-family: 'Space Grotesk', 'Barlow', sans-serif;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
-  font-size: 2.5rem;
+  color: #ffffff;
+  font-size: 2rem;
+  grid-column: 1 / -1;
 }
 
-div {
-  margin-bottom: 1rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
+.inputsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+}
+
+.inputContainer{ 
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 p {
-  margin: 0 0 0 0.5rem 0;
   font-weight: 500;
-  color: #444;
-  font-size: 1.5rem;
+  color: #ffffff;
+  font-size: 0.75rem;
+  margin: 0;
+  min-width: 90px;
+  flex-shrink: 0;
 }
 
 input {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem solid #bbb;
-  border-radius: 6px;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  width: 70px;
+  padding: 4px 6px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 0.75rem;
   box-sizing: border-box;
+  flex-shrink: 0;
 }

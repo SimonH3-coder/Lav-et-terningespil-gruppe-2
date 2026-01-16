@@ -41,20 +41,22 @@ export function Pointsystem1() {
   return (
     <div className={styles.container}>
       <h2>Pointsystem:</h2>
-      {pointTypes.map((type, idx) => {
-        const arr = inputs[idx]
-          .split(",")
-          .map((str) => parseInt(str.trim(), 10))
-          .filter((n) => !isNaN(n));
-        return (
-          <div key={type}>
-            <p>
-              {type.charAt(0).toUpperCase() + type.slice(1)}: {type === "sum" ? total : beregnPoint(arr, type)}
-            </p>
-            {type !== "sum" && <input value={inputs[idx]} onChange={(e) => handleInputChange(idx, e.target.value)} placeholder="Indtast terninger her (fx 1,2,3,4,5,6)" />}
-          </div>
-        );
-      })}
+      <div className={styles.inputsGrid}>
+        {pointTypes.map((type, idx) => {
+          const arr = inputs[idx]
+            .split(",")
+            .map((str) => parseInt(str.trim(), 10))
+            .filter((n) => !isNaN(n));
+          return (
+            <div key={type} className={styles.inputContainer}>
+              <p>
+                {type.charAt(0).toUpperCase() + type.slice(1)}: {type === "sum" ? total : beregnPoint(arr, type)}
+              </p>
+              {type !== "sum" && <input value={inputs[idx]} onChange={(e) => handleInputChange(idx, e.target.value)} placeholder="Indtast Tal" />}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import React from "react";
-import SpillerOgTurer from "./Components/Spiller og turer/Spiller og turer";
 import SplineBackground from "./Components/Baggrund/SplineBaggrund";
 import Header from "./Components/Header/Header";
-import { Pointsystem1 } from "./Components/Pointsystem/Pointsystem1";
+import { GameWrapper } from "./Components/GameWrapper/GameWrapper";
 import { useState } from 'react'
 import {Modal} from './Components/Modal_Regler/Modal_Regler'
 import { Navigation } from './Components/Navigation/Navigation';
@@ -16,9 +15,7 @@ function App() {
     <div>
       <SplineBackground />
       <Header />
-      <Navigation setIsOpen ={setIsOpen}setIsOpen2 = {setIsOpen2} setIsOpen3 = {setIsOpen3} />
-      <Pointsystem1 />
-      <SpillerOgTurer />
+      <GameWrapper />
       
 
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
@@ -54,6 +51,8 @@ function App() {
       <p>YATZY: Et kast, så alle terninger viser ens. Dette kast giver terningernes værdi + 50 point.</p>
 
      </Modal>
+      <Navigation setIsOpen ={setIsOpen}setIsOpen2 = {setIsOpen2} setIsOpen3 = {setIsOpen3} />
+
     </div>
   );
 }

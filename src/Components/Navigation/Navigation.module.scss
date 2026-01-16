@@ -1,27 +1,33 @@
+ul{
+  padding: 1rem;
+}
 
 .navStyle{
     display: flex;
-    flex-direction: row;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Space Grotesk', 'Barlow', sans-serif;
 }
 .pointbuttonStyle{
-  background-color: rgb(255, 0, 191);
+  background-color: rgba(255, 0, 191, 0.55);
 }
 .pointbuttonStyle:hover{
-    background-color: rgb(106, 91, 130);
+    background-color: rgba(106, 91, 130, 0.55);
 }
 .kombbuttonStyle{
-  background-color: rgb(0, 255, 255);
+  background-color: rgba(0, 255, 255, 0.55);
 }
 .kombbuttonStyle:hover{
-   background-color: rgb(106, 91, 130);
+   background-color: rgba(106, 91, 130, 0.55);
 }
 .buttonStyle{
-  background-color: rgb(255, 255, 0);
+  background-color: rgba(255, 255, 0, 0.55);
   
 }
 .buttonStyle:hover{
-  background-color: rgb(106, 91, 130);
+  background-color: rgba(106, 91, 130, 0.55);
 }
 
 

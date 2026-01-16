@@ -1,24 +1,11 @@
-import { useState } from "react";
-import { Pointsystem1 } from "./Components/Pointsystem/Pointsystem1";
-
-function App() {
-  return (
-    <>
-      <Pointsystem1 />
-    </>
-  );
-}
-
 import React from "react";
 import SpillerOgTurer from "./Components/Spiller og turer/Spiller og turer";
 import SplineBackground from "./Components/Baggrund/SplineBaggrund";
 import Header from "./Components/Header/Header";
+import { Pointsystem1 } from "./Components/Pointsystem/Pointsystem1";
 import { useState } from 'react'
 import {Modal} from './Components/Modal_Regler/Modal_Regler'
 import { Navigation } from './Components/Navigation/Navigation';
-
-
-
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,6 +17,7 @@ function App() {
       <SplineBackground />
       <Header />
       <Navigation setIsOpen ={setIsOpen}setIsOpen2 = {setIsOpen2} setIsOpen3 = {setIsOpen3} />
+      <Pointsystem1 />
       <SpillerOgTurer />
       
 

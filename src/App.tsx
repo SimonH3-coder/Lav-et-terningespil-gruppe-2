@@ -1,3 +1,14 @@
+import { useState } from "react";
+import { Pointsystem1 } from "./Components/Pointsystem/Pointsystem1";
+
+function App() {
+  return (
+    <>
+      <Pointsystem1 />
+    </>
+  );
+}
+
 import React from "react";
 import SpillerOgTurer from "./Components/Spiller og turer/Spiller og turer";
 import SplineBackground from "./Components/Baggrund/SplineBaggrund";

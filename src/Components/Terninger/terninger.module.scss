@@ -1,0 +1,147 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.diceContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.die {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #333;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.die:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.18);
+}
+
+.held {
+  background: #b5f9ec;
+  border-color: #00d4d4;
+  box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.08);
+  transform: translateY(-4px);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Placering af prikker */
+.face-1 .dot {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.face-2 .dot:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.face-2 .dot:nth-child(2) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.face-3 .dot:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.face-3 .dot:nth-child(2) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.face-3 .dot:nth-child(3) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.face-4 .dot:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.face-4 .dot:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1;
+}
+.face-4 .dot:nth-child(3) {
+  grid-column: 1;
+  grid-row: 3;
+}
+.face-4 .dot:nth-child(4) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.face-5 .dot:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.face-5 .dot:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1;
+}
+.face-5 .dot:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.face-5 .dot:nth-child(4) {
+  grid-column: 1;
+  grid-row: 3;
+}
+.face-5 .dot:nth-child(5) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.face-6 .dot:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.face-6 .dot:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.face-6 .dot:nth-child(3) {
+  grid-column: 1;
+  grid-row: 3;
+}
+.face-6 .dot:nth-child(4) {
+  grid-column: 3;
+  grid-row: 1;
+}
+.face-6 .dot:nth-child(5) {
+  grid-column: 3;
+  grid-row: 2;
+}
+.face-6 .dot:nth-child(6) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

@@ -1,0 +1,34 @@
+ul{
+  padding: 1rem;
+}
+
+.navStyle{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Space Grotesk', 'Barlow', sans-serif;
+}
+.pointbuttonStyle{
+  background-color: rgba(255, 0, 191, 0.55);
+}
+.pointbuttonStyle:hover{
+    background-color: rgba(106, 91, 130, 0.55);
+}
+.kombbuttonStyle{
+  background-color: rgba(0, 255, 255, 0.55);
+}
+.kombbuttonStyle:hover{
+   background-color: rgba(106, 91, 130, 0.55);
+}
+.buttonStyle{
+  background-color: rgba(255, 255, 0, 0.55);
+  
+}
+.buttonStyle:hover{
+  background-color: rgba(106, 91, 130, 0.55);
+}
+
+
+
